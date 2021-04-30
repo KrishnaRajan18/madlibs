@@ -1,8 +1,9 @@
 import React from "react";
 import "./Story.css";
 
-function Story({ setStory, color, noun, noun2, adjective }) {
+const Story = ({ setStory, noun, noun2, color, adjective }) => {
   const restart = () => {
+    // setShowStory(false);
     setStory([]);
   };
   return (
@@ -13,6 +14,6 @@ function Story({ setStory, color, noun, noun2, adjective }) {
       <button onClick={restart}>Restart</button>
     </div>
   );
-}
+};
 
 export default Story;

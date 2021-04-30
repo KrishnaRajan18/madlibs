@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./MadlibForm.css";
 
-function MadlibForm({ createStory }) {
+const MadlibForm = ({ createStory }) => {
   const INITIAL_STATE = { noun: "", noun2: "", adjective: "", color: "" };
   const [formData, setFormData] = useState(INITIAL_STATE);
   const handleChange = e => {
@@ -15,6 +15,7 @@ function MadlibForm({ createStory }) {
     e.preventDefault();
     createStory({ ...formData });
     setFormData(INITIAL_STATE);
+    // setShowStory(true);
   };
   return (
     <div className="MadlibForm">
@@ -59,6 +60,6 @@ function MadlibForm({ createStory }) {
       </form>
     </div>
   );
-}
+};
 
 export default MadlibForm;
